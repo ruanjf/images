@@ -26,9 +26,9 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v3
         with:
-          context: zipkin/
+          context: nfs-ganesha/
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/zipkin:${{ inputs.app_version }}
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/nfs-ganesha:${{ inputs.app_version }}
           platforms: linux/amd64
           build-args: |
             APP_VERSION=${{ inputs.app_version }}
