@@ -37,5 +37,7 @@ ENV UMASK           0002
 # add files to container
 ADD /entrypoint.sh /entrypoint-hooks.sh /
 
+RUN chmod +x /entrypoint.sh /entrypoint-hooks.sh
+
 ENTRYPOINT [ "/entrypoint.sh" ]
 CMD ["/usr/bin/ganesha.nfsd", "-F", "-L", "/dev/stdout", "-f", "/etc/ganesha/ganesha.conf"]
