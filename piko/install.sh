@@ -30,4 +30,5 @@ esac
 url="https://github.com/andydunstall/piko/releases/download/v${APP_VERSION}/piko-linux-${HT}"
 echo "download $url"
 wget -O /app/piko "$url"
+# curl "$url" -o /app/piko
 chmod +x /app/piko
