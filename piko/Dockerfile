@@ -6,6 +6,6 @@ WORKDIR /app/
 
 ADD install.sh .
 
-RUN sh install.sh $APP_VERSION
+RUN sh install.sh "${APP_VERSION}"
 
 ENTRYPOINT [ "/app/piko" ]

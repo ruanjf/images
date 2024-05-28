@@ -2,7 +2,7 @@
 
 #set -x
 
-APP_VERSION=$1
+APP_VERSION=${1}
 MACH=`uname -m`
 
 HT=''
@@ -25,5 +25,7 @@ case "$MACH" in
     ;;
 esac
 
-wget -O /app/piko https://github.com/andydunstall/piko/releases/download/v${APP_VERSION}/piko-linux-${HT}
+url="https://github.com/andydunstall/piko/releases/download/v${APP_VERSION}/piko-linux-${HT}"
+echo "download $url"
+wget -O /app/piko "$url"
 chmod +x /app/piko
