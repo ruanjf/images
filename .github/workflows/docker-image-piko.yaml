@@ -29,6 +29,6 @@ jobs:
           context: piko/
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/piko:${{ inputs.app_version }}
-          platforms: linux/amd64,linux/arm64,linux/arm/v7
+          platforms: linux/amd64,linux/arm64
           build-args: |
             APP_VERSION=${{ inputs.app_version }}

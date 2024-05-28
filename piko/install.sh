@@ -5,6 +5,8 @@
 APP_VERSION=${1}
 MACH=`uname -m`
 
+echo "uname: `uname -a`"
+
 HT=''
 
 case "$MACH" in
